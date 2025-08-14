@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Enviando Feedback...</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const score = params.get("score");
+    const timestamp = new Date().toISOString();
+    const webhookUrl = "https://hook.us1.make.com/xxxxx"; // <- Pega tu webhook aquí
+
+    fetch(`${webhookUrl}?score=${score}&timestamp=${timestamp}`)
+      .then(() => {
+        // Redirección opcional
+        window.location.href = "https://tusitio.com/gracias";
+      });
+  </script>
+</head>
+<body>
+  Enviando feedback...
+</body>
+</html>
