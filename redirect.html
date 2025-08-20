@@ -7,7 +7,7 @@
     const params = new URLSearchParams(window.location.search);
     const score = params.get("score");
     const timestamp = new Date().toISOString();
-    const webhookUrl = "https://hook.us1.make.com/xxxxx"; // <- Pega tu webhook aquí
+    const webhookUrl = "https://hook.eu2.make.com/jaiibn4pruftv9932sfgvzvj485a748h"; // <- Pega tu webhook aquí
 
     fetch(`${webhookUrl}?score=${score}&timestamp=${timestamp}`)
       .then(() => {
